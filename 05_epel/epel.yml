@@ -1,0 +1,22 @@
+---
+##########################################
+# Play 01. EPEL 패키지 설치
+# * 01) epel-release 패키지 설치
+# * 02) boxes 패키지 설치
+##########################################
+- name: Play 01 - EPEL 패키지 설치
+  hosts: all
+  become: true
+  gather_facts: false
+  tasks:
+    - name: 1) epel-release 패키지 설치
+      ansible.builtin.include_tasks: install_package.yml
+      vars:
+        package:
+          web_pkg: epel-release
+
+    - name: 2) boxes 패키지 설치
+      ansible.builtin.include_tasks: install_package.yml
+      vars:
+        package:
+          web_pkg: boxes

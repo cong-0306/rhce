@@ -1,0 +1,11 @@
+---
+- name: 사용자 추가
+  hosts: web1.example.com
+  become: true
+  vars_files:
+    - secret.yml
+  tasks:
+    - name: Create user from secret.yml
+      ansible.builtin.user:
+        name: "{{ username }}"
+        password: "{{ pwhash }}"

@@ -1,0 +1,13 @@
+---
+# vars file for rollbacksvc
+fw_rules:
+  - http
+  - https
+
+svcs:
+  - httpd
+  - firewalld
+
+packages:
+  - httpd
+  - mod_ssl

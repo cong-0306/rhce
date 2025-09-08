@@ -1,0 +1,30 @@
+Sep  3 16:02:57 ansible1 polkitd[908]: Loading rules from directory /etc/polkit-1/rules.d
+Sep  3 16:02:57 ansible1 polkitd[908]: Loading rules from directory /usr/share/polkit-1/rules.d
+Sep  3 16:02:57 ansible1 polkitd[908]: Finished loading, compiling and executing 13 rules
+Sep  3 16:02:57 ansible1 polkitd[908]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Sep  3 16:02:57 ansible1 sshd[1007]: Server listening on 0.0.0.0 port 22.
+Sep  3 16:02:57 ansible1 sshd[1007]: Server listening on :: port 22.
+Sep  3 20:00:34 ansible1 sshd[1651]: Accepted publickey for ansible from 192.168.10.10 port 36084 ssh2: RSA SHA256:ZFAn1QT6nLbtN4KzndZ2s6ZcHDETWoNHa+nKtowQCHs
+Sep  3 20:00:34 ansible1 systemd[1655]: pam_unix(systemd-user:session): session opened for user ansible(uid=1001) by ansible(uid=0)
+Sep  3 20:00:34 ansible1 sshd[1651]: pam_unix(sshd:session): session opened for user ansible(uid=1001) by ansible(uid=0)
+Sep  3 20:00:35 ansible1 sudo[1846]: ansible : TTY=pts/0 ; PWD=/home/ansible ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-pplzfxqjscloqbvzuxlmajlkkcgnfiaj ; /usr/bin/python3 /home/ansible/.ansible/tmp/ansible-tmp-1756897234.6741197-4991-223376739877942/AnsiballZ_setup.py'
+Sep  3 20:00:35 ansible1 sudo[1846]: pam_unix(sudo:session): session opened for user root(uid=0) by ansible(uid=1001)
+Sep  3 20:00:35 ansible1 sudo[1846]: pam_unix(sudo:session): session closed for user root
+Sep  3 20:00:39 ansible1 sudo[2040]: ansible : TTY=pts/0 ; PWD=/home/ansible ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-frqxdknvuwcwugkaejzomvjvjyantruv ; /usr/bin/python3 /home/ansible/.ansible/tmp/ansible-tmp-1756897238.9957469-5050-144671379815795/AnsiballZ_slurp.py'
+Sep  3 20:00:39 ansible1 sudo[2040]: pam_unix(sudo:session): session opened for user root(uid=0) by ansible(uid=1001)
+Sep  3 20:00:39 ansible1 sudo[2040]: pam_unix(sudo:session): session closed for user root
+Sep  3 20:01:39 ansible1 sshd[1671]: Received disconnect from 192.168.10.10 port 36084:11: disconnected by user
+Sep  3 20:01:39 ansible1 sshd[1671]: Disconnected from user ansible 192.168.10.10 port 36084
+Sep  3 20:01:39 ansible1 sshd[1651]: pam_unix(sshd:session): session closed for user ansible
+Sep  3 20:03:09 ansible1 sshd[2084]: Accepted publickey for ansible from 192.168.10.10 port 35950 ssh2: RSA SHA256:ZFAn1QT6nLbtN4KzndZ2s6ZcHDETWoNHa+nKtowQCHs
+Sep  3 20:03:09 ansible1 systemd[2088]: pam_unix(systemd-user:session): session opened for user ansible(uid=1001) by ansible(uid=0)
+Sep  3 20:03:09 ansible1 sshd[2084]: pam_unix(sshd:session): session opened for user ansible(uid=1001) by ansible(uid=0)
+Sep  3 20:03:09 ansible1 sudo[2279]: ansible : TTY=pts/0 ; PWD=/home/ansible ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-vveaapoqshdxltfyqpdvbjsehsbsodbk ; /usr/bin/python3 /home/ansible/.ansible/tmp/ansible-tmp-1756897389.2509515-5126-99319192327240/AnsiballZ_setup.py'
+Sep  3 20:03:09 ansible1 sudo[2279]: pam_unix(sudo:session): session opened for user root(uid=0) by ansible(uid=1001)
+Sep  3 20:03:10 ansible1 sudo[2279]: pam_unix(sudo:session): session closed for user root
+Sep  3 20:03:11 ansible1 sudo[2472]: ansible : TTY=pts/0 ; PWD=/home/ansible ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-xedqskrzuznijdheshgvlywllgpxtyvv ; /usr/bin/python3 /home/ansible/.ansible/tmp/ansible-tmp-1756897391.387956-5186-264822601557542/AnsiballZ_slurp.py'
+Sep  3 20:03:11 ansible1 sudo[2472]: pam_unix(sudo:session): session opened for user root(uid=0) by ansible(uid=1001)
+Sep  3 20:03:11 ansible1 sudo[2472]: pam_unix(sudo:session): session closed for user root
+Sep  3 20:03:47 ansible1 sudo[2674]: ansible : TTY=pts/0 ; PWD=/home/ansible ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-oczdnzszwpuzswlsdmwlgoiflutaketw ; /usr/bin/python3 /home/ansible/.ansible/tmp/ansible-tmp-1756897426.8520048-5244-74618827531487/AnsiballZ_setup.py'
+Sep  3 20:03:47 ansible1 sudo[2674]: pam_unix(sudo:session): session opened for user root(uid=0) by ansible(uid=1001)
+Sep  3 20:03:47 ansible1 sudo[2674]: pam_unix(sudo:session): session closed for user root

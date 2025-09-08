@@ -1,0 +1,10 @@
+--- 
+- name: Restore playbook
+  hosts: all
+  tasks:
+    - name: 1) 패키지 설치 - httpd, tomcat
+      ansible.builtin.include_tasks: remove_packages.yml
+      vars:
+        packages:
+          - httpd
+          - tomcat

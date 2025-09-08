@@ -1,0 +1,40 @@
+---
+- name: Restore - 웹 서버 설정 복원
+  hosts: webserver
+  become: true
+
+  vars_files:
+    - vars/vars.yml
+
+  tasks:
+    - name: 1) index.html 삭제
+      ansible.builtin.file:
+        path: "{{ indexfile }}"
+        state: absent
+
+    - name: 2) 방화벽 서비스 제거 - {{ fw_80 }}, {{ fw_433 }}
+      ansible.posix.firewalld:
+        service: "{{ item }}"
+        permanent: true
+        immediate: true
+        state: disabled
+      loop:
+        - "{{ fw_80 }}"
+        - "{{ fw_433 }}"
+
+    - name: 3) 서비스 중지 및 비활성화 - {{ svc_web }}, {{ svc_fw }}
+      ansible.builtin.systemd:
+        name: "{{ item }}"
+        state: stopped
+        enabled: false
+      loop:
+        - "{{ svc_web }}"
+        - "{{ svc_fw }}"
+
+    - name: 4) 패키지 제거 - {{ pkg_http_web }},{{ pkg_https_web }},{{ pkg_fw }},{{ pkg_python }}
+      ansible.builtin.dnf:
+        name:
+          - "{{ pkg_http_web }}"
+          - "{{ pkg_https_web }}"
+          - "{{ pkg_python }}"
+        state: absent
